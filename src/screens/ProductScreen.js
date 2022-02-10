@@ -189,7 +189,7 @@ const ProductScreen = ({ history, match }) => {
                         type="submit"
                         variant="primary"
                       >
-                        Submit
+                        Add Review
                       </Button>
                     </Form>
                   ) : (

@@ -105,12 +105,7 @@ const StatisticScreen = () => {
         {error && <Message variant="danger">{error}</Message>}
         {data && (
           <>
-            <h4>Total Sale: ${data.totalSale}</h4>
-            <h4>Total Tax Price: ${data.totalTaxPrice}</h4>
-            <h4>Total Shipping Price: ${data.totalShippingPrice}</h4>
-            <br />
-
-            <h2>Details:</h2>
+            <h2>Products's Details:</h2>
             <Table striped bordered hover responsive className="table-sm">
               <thead>
                 <tr>
@@ -132,6 +127,25 @@ const StatisticScreen = () => {
                     </td>
                   </tr>
                 ))}
+              </tbody>
+            </Table>
+            <br />
+            <h2>Total Bill:</h2>
+
+            <Table striped bordered hover responsive className="table-sm">
+              <thead>
+                <tr>
+                  <th>Total Saled</th>
+                  <th>Total Tax Price</th>
+                  <th>Total Shipping Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>${data?.totalSale}</td>
+                  <td>${data?.totalTaxPrice.toFixed(2)}</td>
+                  <td>${data?.totalShippingPrice}</td>
+                </tr>
               </tbody>
             </Table>
           </>
