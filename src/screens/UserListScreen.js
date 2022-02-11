@@ -66,7 +66,7 @@ const UserListScreen = ({ history }) => {
               <th>EMAIL</th>
               <th>ADMIN</th>
               <th></th>
-              <th>is LOCKED</th>
+              <th>LOCKED</th>
               <th></th>
               <th></th>
             </tr>
